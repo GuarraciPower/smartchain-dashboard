@@ -97,6 +97,10 @@ reason_translation = {
 # Translate 'Reason' column to English
 missed_sales_filtered['Reason'] = missed_sales_filtered['Reason'].map(reason_translation)
 
+############################
+# Line Chart: Missed Sales Over Time by Reason
+############################
+
 # Drop rows where Date or Reason is missing
 missed_sales_clean = missed_sales_filtered.dropna(subset=['Date', 'Reason']).copy()
 
