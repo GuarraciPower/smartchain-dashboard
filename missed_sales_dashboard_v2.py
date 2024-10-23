@@ -49,10 +49,10 @@ def load_postal_code_data(file_path):
     return pd.read_excel(file_path)
 
 # Load the datasets
-missed_sales_file = '/home/mindtric/Downloads/febelco/output/MissedSalesTabel_filtered_labeled.parquet'
-customer_file = '/home/mindtric/Downloads/febelco/output/Customer.parquet'
-sales_file = '/home/mindtric/Downloads/febelco/output/SaleTabel_labeled.parquet'
-postal_code_file = '/home/mindtric/Downloads/CustomerCityPC.xlsx'
+missed_sales_file = './data/MissedSalesTabel_filtered_labeled.parquet'
+customer_file = './data/Customer.parquet'
+sales_file = './data/SaleTabel_labeled.parquet'
+postal_code_file = './data/CustomerCityPC.xlsx'
 
 missed_sales = load_data(missed_sales_file)
 customer_data = load_data(customer_file)
@@ -335,7 +335,7 @@ fig.add_trace(go.Scattermapbox(
 # Update layout to use OpenStreetMap
 fig.update_layout(
     mapbox=dict(
-        accesstoken='sk.eyJ1IjoibWluZHRyaWMiLCJhIjoiY20ya2o3NGQ2MDFwNzJrc2dkbnNpZXM3MSJ9.LwRn4FCvhCNuhjlqs-OBUQ',  # Replace with a valid Mapbox token
+        accesstoken='pk.eyJ1IjoibWluZHRyaWMiLCJhIjoiY20ya2Fydmh4MGM1ZjJqcjEycXNhMjR5aSJ9.yDnFvogUha5P5-C6J12BtQ',  # Replace with a valid Mapbox token
         style='open-street-map',
         center=dict(lon=4.469936, lat=50.503887),  # Centered on Belgium
         zoom=6
@@ -351,6 +351,3 @@ st.plotly_chart(fig)
 ############################
 # End of Script
 ############################
-
-# Reasoned next step
-# This visualization can be further refined by adjusting marker sizes, adding more layers such as city boundaries, or integrating temporal filters. Do you have any specific features you would like to enhance further?
